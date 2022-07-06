@@ -18,10 +18,11 @@ class HBNBCommand(cmd.Cmd):
     class that defines the "entry point of the command interpreter"
     """
     prompt = "(hbnb)"
-    classes = {"BaseModel", "State", "City",
-               "Amenity", "Place", "Review", "User"}
+    classes = {
+        "BaseModel", "State", "City",
+        "Amenity", "Place", "Review", "User"
+    }
 
-    
     def do_create(self, line):
         """Create command to create an instance/object of a class"""
         """
@@ -35,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
             instance = eval(line)()
             instance.save()
             print(instance.id)
-    
+
     def do_show(self, line):
         """Show command to print the string representation of an instance"""
         """
@@ -80,7 +81,6 @@ class HBNBCommand(cmd.Cmd):
                     storage.save()
         except IndexError:
             print("** instance id missing **")
-
 
     def do_all(self, line):
         """All command to print all instances of a/all class/es"""
@@ -168,7 +168,6 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** value missing **")
 
-
     def default(self, line):
         """Default command that handles class cmds: <class name>.func()"""
         """
@@ -225,9 +224,10 @@ class HBNBCommand(cmd.Cmd):
         except IndexError:
             print("*** Unknown syntax: {}".format(line))
 
-def parse_line(line):
+    def parse_line(line):
         """Helper method to parse user typed input"""
         return tuple(line.split())
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
