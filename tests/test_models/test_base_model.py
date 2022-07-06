@@ -9,6 +9,7 @@ import models
 import uuid
 import unittest
 import os
+import pep8
 
 
 class BaseModelTest(unittest.TestCase):
@@ -109,6 +110,19 @@ class BaseModelTest(unittest.TestCase):
         for arg, val in my_dict.items():
             if arg in ('created_at', 'updated_at'):
                 self.assertIsInstance(val, str)
+
+    def test_pep8_conformance_base_model(self):
+        """
+        Method that tests:
+            if a file meet with pep8 criteria
+        """
+        style = pep8.StyleGuide()
+        check = style.check_files(['models/base_model.py'])
+        self.assertEqual(
+            check.total_errors,
+            0,
+            'PEP8 style errors: %d' % check.total_errors
+        )
 
 
 if __name__ == "__main__":
