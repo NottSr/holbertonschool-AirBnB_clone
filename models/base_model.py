@@ -4,6 +4,7 @@ Model BaseModel
 """
 
 import uuid
+import models
 from datetime import datetime
 
 
@@ -15,6 +16,9 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """ __init__ Method
+        Args:
+            *args. Tuple that contains all arguments (Not used)
+            **kwargs. Dictionary that contains all arguments by key/value
 
         Public instance attributes:
             id: string - assigned with an uuid when an instance is created
@@ -24,7 +28,7 @@ class BaseModel:
                 an instance is created and it will be updated every time
                 you change your object.
         """
-        
+
         if kwargs:
             for arg, val in kwargs.items():
                 if arg in ('created_at', 'updated_at'):
@@ -36,6 +40,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
+            models.storage.new(self)
 
     def __str__(self):
         """ __str__ Class method
@@ -52,6 +57,7 @@ class BaseModel:
         with the current datetime.
         """
         self.updated_at = datetime.now()
+        models.storage.save(self)
 
     def to_dict(self):
         """ to_dict Class method
