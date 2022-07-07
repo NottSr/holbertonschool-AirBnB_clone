@@ -224,9 +224,9 @@ class HBNBCommand(cmd.Cmd):
         except IndexError:
             print("*** Unknown syntax: {}".format(line))
 
-    def parse_line(line):
-        """Helper method to parse user typed input"""
-        return tuple(line.split())
+def parse_line(line):
+    """Helper method to parse user typed input"""
+    return tuple(line.split())
 
 
 if __name__ == "__main__":
