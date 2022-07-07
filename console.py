@@ -88,16 +88,15 @@ class HBNBCommand(cmd.Cmd):
         method that prints all string representation of all instances
         based or not on the class name."""
         args = parse_line(line)
-        obj_list = []
+        obj_list = storage.all()
         if len(line) == 0:
-            for objs in storage.all().values():
-                obj_list.append(objs)
-            print(obj_list)
+            for obj in obj_list:
+                print(str(obj_list[obj]))
         elif args[0] in HBNBCommand.classes:
-            for key, objs in storage.all().items():
-                if args[0] in key:
-                    obj_list.append(objs)
-            print(obj_list)
+            keys = obj_list.keys()
+            for key in keys:
+                if key.startswith(args[0]):
+                    print(str(obj_list[key]))
         else:
             print("** class doesn't exist **")
 
