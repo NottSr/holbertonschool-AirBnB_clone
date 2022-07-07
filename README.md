@@ -121,23 +121,25 @@ EOF  help  quit
 (hbnb)
 $
 ```
-**Example Usage:**
-```
-newMod = BaseModel()
-       - creates an instance of a method
+## Files
 
-print(NewMod.id)
-	- prints the UUID
-	   b6a6e15c-c67d-4312-9a75-9d084935e5
+File Name | Description
+--- | ---
+`README.md` | A description of the Holberton AirBnB Project
+`AUTHORS` | A listing of the project contributors
+`console.py` | The program to launch the HBNB console
+`basemodel.py` | Defines the BaseModel Class
+`file_storage.py` | Defines the FileStorage Class & handles the database
+`user.py` | Defines the User Class, a subclass of BaseModel
+`city.py` | Defines the City Class, a subclass of BaseModel
+`state.py` | Defines the User Class, a subclass of BaseModel
+`amenity.py` | Defines the Amenity Class, a subclass of BaseModel
+`review.py` | Defines the Review Class, a subclass of BaseModel
+`place.py` | Defines the Place Class, a subclass of BaseModel
+`tests/` | The test directory containing the unittest files for each Class
+---
 
-print(NewMod.created_at)
-         - prints the time when the instance was created (ISO format)
-	   '2017-09-28T21:03:54.052298'
 
-print(NewMod.updated_at)
-	- prints the most recent time that file was updated (ISO format)
-       	  '2017-09-28T21:03:54.052302'
-```
 ### Authors
 
 NottSr - Leonardo Berrio Rendon [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/30px-Twitter_Bird.svg.png)](https://twitter.com/Sr_Nott)
