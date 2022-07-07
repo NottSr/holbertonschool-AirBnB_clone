@@ -138,3 +138,9 @@ print(NewMod.updated_at)
 	- prints the most recent time that file was updated (ISO format)
        	  '2017-09-28T21:03:54.052302'
 ```
+### Authors
+
+NottSr - Leonardo Berrio Rendon [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/30px-Twitter_Bird.svg.png)](https://twitter.com/Sr_Nott)
+
+Kadzahk - Juan Manuel Muñoz Rincon [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/30px-Twitter_Bird.svg.png)](https://twitter.com/kadzahk)
+
