@@ -13,3 +13,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class="col-"] {
+        width: 100%;
+    }
+}
