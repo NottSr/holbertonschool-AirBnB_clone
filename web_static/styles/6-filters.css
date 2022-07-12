@@ -44,7 +44,6 @@ button:hover {
     position: absolute;
     text-align: left;
     margin-right: 75%;
-    overflow: hidden;
 }
 
 /* Amenities section properties */
@@ -56,7 +55,6 @@ button:hover {
     position: absolute;
     text-align: left;
     margin-right: 50%;
-    overflow: hidden;
 }
 
 /* Container h3 and h4 filters */
@@ -88,6 +86,7 @@ ul, ol {
     margin: 0px;
     padding: 0px;
     padding-top: 20px;
+    z-index: 1;
 }
 
 .container .filters .popover {
@@ -112,7 +111,7 @@ ul, ol {
     font-size: 16px;
     text-align: left;
     position: relative;
-    left: 25px;
+    left: 40px;
 }
 
 .container .filters .locations .popover ul li a {
